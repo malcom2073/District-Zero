@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="A_ZombieHordesPurge" />
+	<DisplayName value="Zombie Horde Purge (Robots Only pre-patch)" />
+	<Version value="1.0.0" />
+	<Description value="Removes vanilla feral wandering-horde tables before District Zero loads, so its robot versions are the only definitions. Part of the RobotsOnly setup." />
+	<Author value="local" />
+</xml>

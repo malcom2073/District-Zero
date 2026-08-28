@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Deletes vanilla feral-wandering-horde groups BEFORE District Zero loads.
+     DZ re-adds these names with robot content but never deletes the vanilla
+     copies, which would otherwise remain as empty zombie husks after
+     ZZZ_RobotsOnly strips entries (empty groups abort entitygroups loading).
+     MUST load before 'District Zero' (folder name starts with A_). -->
+<config>
+	<remove xpath="//entitygroup[starts-with(@name,'FwanderingHordeStage')]"/>
+</config>

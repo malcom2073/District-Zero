@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="ZZZ_RobotsOnly" />
+	<DisplayName value="Robots Only (District Zero addon)" />
+	<Version value="1.0.0" />
+	<Description value="Removes all humanoid zombies from spawning; District Zero robots only. Loads last." />
+	<Author value="local" />
+</xml>

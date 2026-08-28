@@ -1,0 +1,2762 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ZZZ_RobotsOnly: strips ALL humanoid zombies from entity spawn groups
+     and backfills emptied groups with District Zero robots.
+     Load order: last (folder name prefix ZZZ). Animals are untouched. -->
+<config>
+
+  <!-- global strip of every zombie entry, whatever format the group uses
+       (single-node mixed groups keep their robot entries this way) -->
+  <remove xpath="//entitygroup/e[starts-with(@n,'zombie')]"/>
+  <remove xpath="//entitygroup/entity[starts-with(@name,'zombie')]"/>
+
+  <!-- refill groups whose entire content was zombies -->
+  <set xpath="//entitygroup[@name='PrisonGroup']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroup']">
+		robotAndroidClank, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS200']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS400']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBikerBarGroupGS800']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieBurntGroup']">
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieChargedGroup']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieFatCopGroup']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroup']">
+		robotAndroidEva, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS200']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS50']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieGhostTownGroupGS800']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieInfernalGroup']">
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieScouts']">
+		robotDroneNano, 1
+		robotDronePoliceNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieScoutsFeral']">
+		robotDroneNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieScoutsRadiated']">
+		robotDroneNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSoldierGroup']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroup']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS1']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS100']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS200']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS400']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS50']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombieSpecialInfectedGroupGS800']">
+		robotCyborgNova, 1
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesAllWasteland']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesBoss']">
+		robotCyborgTitanOvercharged, 1
+		robotAndroidPrimeInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesBurntForestNight']">
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesCave']">
+		robotAndroidEva, 1
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesDesert']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesDesertNight']">
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesSnow']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='ZombiesSnowNight']">
+		robotAndroidEva, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1000']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1015']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS103']">
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1030']">
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1045']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1060']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1075']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1091']">
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS11']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS110']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1106']">
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1122']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1137']">
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1153']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1169']">
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS117']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1185']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1201']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1217']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1233']">
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1249']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS125']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1265']">
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1281']">
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1298']">
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1314']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS132']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1331']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1347']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1364']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1380']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1397']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS14']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS140']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1414']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1431']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1448']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1465']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS148']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1482']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1499']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1516']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1533']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1551']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS156']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1568']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1586']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1603']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1621']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1638']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS164']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1656']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1674']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1692']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1710']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS172']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1728']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1746']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1764']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1782']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS18']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1800']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS181']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1818']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1837']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1855']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1873']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS189']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1892']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1911']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1929']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1948']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1967']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS198']">
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS1986']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2004']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2023']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2042']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2061']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS207']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2081']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2100']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2119']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2138']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2158']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS216']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2177']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2197']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS22']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2216']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2236']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS225']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2255']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2275']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2295']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2315']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2334']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS234']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2354']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2374']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2394']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2414']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS243']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2435']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2455']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2475']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2495']">
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2516']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS252']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2536']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2557']">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2577']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2598']">
+		robotCyborgNova, 1
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2618']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS262']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2639']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2660']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2681']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS27']">
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2702']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS272']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2723']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2744']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2765']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2786']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2807']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS281']">
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2828']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2849']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2870']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2892']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS291']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2913']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2935']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2956']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2978']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS2999']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS301']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3021']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3043']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3064']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3086']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS31']">
+		robotAndroidEva, 1
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3108']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS311']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3130']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3152']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3174']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3196']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3218']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS322']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3240']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3263']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3285']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3307']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS332']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3330']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3352']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3375']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3397']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3420']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS343']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3442']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3465']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3488']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3510']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS353']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3533']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3556']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3579']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS36']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3602']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3625']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS364']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3648']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3671']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3694']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3718']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS374']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3741']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3764']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3787']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3811']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3834']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS385']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3858']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3881']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3905']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3929']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3952']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS396']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS3976']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4000']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4024']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4048']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS407']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4072']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4096']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS41']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4120']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4144']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4168']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS419']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4192']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4216']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4240']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4265']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4289']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS430']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4313']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4338']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4362']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4387']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS441']">
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4411']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4436']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4461']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4485']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4510']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS453']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4535']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4560']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4585']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS46']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4610']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4635']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS464']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4660']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4685']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4710']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4735']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS476']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4760']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4786']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4811']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4836']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4862']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS488']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4887']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4913']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4938']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4964']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS4989']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS500']">
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5015']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5041']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5066']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5092']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5118']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS512']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5144']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5170']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5196']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS52']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5222']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS524']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5248']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5274']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5300']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5326']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5352']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS536']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5379']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5405']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5431']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5458']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS548']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5484']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5511']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5537']">
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5564']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5590']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS560']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5617']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5644']">
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5670']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5697']">
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5724']">
+		robotCyborgSpark, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS573']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5751']">
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS5778']">
+		robotCyborgSpark, 1
+		robotAndroidPrime, 1
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS58']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS585']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS598']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS610']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS623']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS636']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS64']">
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS649']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS662']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS675']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS688']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS70']">
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS702']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS715']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS729']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS742']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS756']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS76']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS769']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS783']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS797']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS8']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS811']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS82']">
+		robotAndroidClank, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS825']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS839']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS853']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS868']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS882']">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS89']">
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS896']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS911']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS925']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS940']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS955']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS96']">
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS970']">
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='defenseHordeStageGS985']">
+		robotAndroidRex, 1
+		robotCyborgSpark, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='sleeperHordeStageGS110']">
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='sleeperHordeStageGS156']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieArlene']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieArleneCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieArleneFeral']">
+		robotAndroidOrionOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieArleneRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBiker']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBikerFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBikerInfernal']">
+		robotAndroidChronosInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBikerRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBoe']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBoeCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBoeFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBoeInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBoeRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBowler']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBowlerFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBowlerInfernal']">
+		robotAndroidAxlInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBowlerRadiated']">
+		robotAndroidAxlRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurnt']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS100']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS200']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS50']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBurntRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessMan']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManCharged']">
+		robotAndroidRalphShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroup']">
+		robotAndroidOrion, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS1']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS100']">
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS200']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS50']">
+		robotAndroidEva, 1
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManFeralGroupGS800']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieBusinessManRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieChuck']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieChuckCharged']">
+		robotAndroidRalphShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieChuckFeral']">
+		robotAndroidClankOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieChuckInfernal']">
+		robotAndroidRexInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieChuckRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDarlene']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDarleneCharged']">
+		robotAndroidEvaShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDarleneFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDarleneInfernal']">
+		robotAndroidRexInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDarleneRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieDemolition']">
+		robotDroidBomber, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCop']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS100']">
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS50']">
+		robotAndroidEva, 1
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatCopRadiated']">
+		robotAndroidAxlRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiian']">
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroup']">
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS400']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS50']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianFeralGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianInfernal']">
+		robotAndroidChronosInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFatHawaiianRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFemaleFat']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFemaleFatFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFemaleFatInfernal']">
+		robotAndroidAxlInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFemaleFatRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFrostclaw']">
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFrostclawCharged']">
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFrostclawFeral']">
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFrostclawInfernal']">
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieFrostclawRadiated']">
+		robotCyborgSpark, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmate']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroup']">
+		robotAndroidOrion, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS100']">
+		robotAndroidClank, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS200']">
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS50']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateFeralGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieInmateRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJanitor']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJanitorCharged']">
+		robotAndroidEvaShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJanitorFeral']">
+		robotAndroidOrionOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJanitorInfernal']">
+		robotAndroidAxlInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJanitorRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJoe']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJoeCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJoeFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieJoeRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLab']">
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroup']">
+		robotAndroidRalph, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS1']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS100']">
+		robotAndroidClank, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS200']">
+		robotAndroidAxl, 1
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabFeralGroupGS800']">
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS1']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLabWorkerGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLumberjack']">
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLumberjackFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLumberjackInfernal']">
+		robotAndroidChronosInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieLumberjackRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMaleHazmat']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMaleHazmatCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMaleHazmatFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMaleHazmatInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMaleHazmatRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMarlene']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMarleneCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMarleneFeral']">
+		robotAndroidOrionOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMarleneRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMoe']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMoeFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMoeInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMoeRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMutated']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMutatedCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMutatedFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMutatedInfernal']">
+		robotAndroidRalphInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieMutatedRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurse']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroup']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS1']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS100']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS400']">
+		robotAndroidChronos, 1
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseFeralGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieNurseRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePartyGirl']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePartyGirlCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePartyGirlFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePartyGirlRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePlagueSpitter']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePlagueSpitterCharged']">
+		robotAndroidEvaShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePlagueSpitterFeral']">
+		robotAndroidEvaOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePlagueSpitterInfernal']">
+		robotAndroidOrionInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePlagueSpitterRadiated']">
+		robotAndroidEvaRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS1']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS200']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS50']">
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombiePrisonGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieRancher']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieRancherCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieRancherFeral']">
+		robotAndroidAxlOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieRancherInfernal']">
+		robotAndroidRexInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieRancherRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieScreamer']">
+		robotDroneNano, 1
+		robotDronePoliceNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieScreamerCharged']">
+		robotDroneNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieScreamerFeral']">
+		robotDroneNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieScreamerRadiated']">
+		robotDroneNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSkateboarder']">
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSkateboarderCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSkateboarderFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSkateboarderInfernal']">
+		robotAndroidRexInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSkateboarderRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldier']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroup']">
+		robotAndroidOrion, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS1']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS50']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierFeralGroupGS800']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS1']">
+		robotAndroidClank, 1
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS100']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS200']">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierGroupGS800']">
+		robotAndroidRex, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierInfernal']">
+		robotAndroidChronosInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSoldierRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpider']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderCharged']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderFeral']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS1']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS100']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS200']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS400']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS50']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderGroupGS800']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderInfernal']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSpiderRadiated']">
+		robotSpiderBot, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteve']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteveCharged']">
+		robotAndroidOrionShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteveCrawler']">
+		robotSpiderBotNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteveCrawlerFeral']">
+		robotSpiderBotNano, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteveFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieSteveRadiated']">
+		robotAndroidAxlRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieTomClark']">
+		robotAndroidBolt, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieTomClarkCharged']">
+		robotAndroidAxlShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieTomClarkFeral']">
+		robotAndroidClankOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieTomClarkRadiated']">
+		robotAndroidAxlRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorker']">
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerCharged']">
+		robotAndroidRalphShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeral']">
+		robotAndroidOrionOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroup']">
+		robotAndroidRalph, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS1']">
+		robotAndroidClank, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS100']">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS200']">
+		robotAndroidEva, 1
+		robotAndroidAxl, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS400']">
+		robotAndroidAxl, 1
+		robotAndroidChronos, 1
+		robotAndroidOrion, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS50']">
+		robotAndroidBolt, 1
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerFeralGroupGS800']">
+		robotAndroidOrion, 1
+		robotAndroidRex, 1
+		robotAndroidChronos, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerInfernal']">
+		robotAndroidAxlInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieUtilityWorkerRadiated']">
+		robotAndroidRalphRadiated, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieWightCharged']">
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieWightFeral']">
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieWightInfernal']">
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieWightRadiated']">
+		robotCyborgNova, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieYo']">
+		robotAndroidEva, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieYoCharged']">
+		robotAndroidRalphShocker, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieYoFeral']">
+		robotAndroidRalphOvercharged, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieYoInfernal']">
+		robotAndroidRalphInferno, 1
+  </set>
+  <set xpath="//entitygroup[@name='zombieYoRadiated']">
+		robotAndroidOrionRadiated, 1
+  </set>
+
+
+  <!-- legacy A16-era sleeper groups referenced by POI prefabs but missing
+       from V1.0/DZ entitygroups -->
+  <append xpath="/entitygroups">
+	<entitygroup name="GroupGenericZombie">
+		robotAndroidBolt, 1
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+	</entitygroup>
+	<entitygroup name="S_-Group_Generic_Zombie">
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+	</entitygroup>
+	<entitygroup name="GroupAbandonedHouse">
+		robotAndroidEva, 1
+		robotAndroidRalph, 1
+		robotAndroidClank, 1
+	</entitygroup>
+	<entitygroup name="GroupGhostTown">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+		robotCyborgSpark, 1
+	</entitygroup>
+	<entitygroup name="GroupBikerBar">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+	</entitygroup>
+	<entitygroup name="GroupZomSoldier">
+		robotAndroidOrion, 1
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotDroidSoldier, 1
+	</entitygroup>
+	<entitygroup name="GroupZomBadass">
+		robotAndroidChronos, 1
+		robotAndroidRex, 1
+		robotCyborgNova, 1
+		robotAndroidPrime, 1
+	</entitygroup>
+	<entitygroup name="GroupZomBadassOnly">
+		robotAndroidPrime, 1
+		robotAndroidAndromeda, 1
+		robotCyborgTitan, 1
+	</entitygroup>
+	<entitygroup name="ZomFatCops">
+		robotDroidCombat, 1
+		robotDroidSoldier, 1
+	</entitygroup>
+	<entitygroup name="ZomBurnt">
+		robotCyborgSpark, 1
+		robotAndroidRex, 1
+	</entitygroup>
+	<entitygroup name="ZomBusinessman">
+		robotAndroidAxl, 1
+		robotAndroidOrion, 1
+	</entitygroup>
+	<entitygroup name="ZomHazMatOnly">
+		robotAndroidChronos, 1
+		robotCyborgNova, 1
+	</entitygroup>
+	<entitygroup name="ZomJanitorOnly">
+		robotAndroidClank, 1
+		robotAndroidEva, 1
+	</entitygroup>
+	<entitygroup name="ZomLumberJack">
+		robotAndroidRalph, 1
+		robotAndroidAxl, 1
+	</entitygroup>
+	<entitygroup name="ZomSnow">
+		robotMechLightBiped, 1
+		robotAndroidOrion, 1
+	</entitygroup>
+	<entitygroup name="ZomSpiderOnly">
+		robotSpiderBot, 1
+		robotSpiderBotNano, 1
+	</entitygroup>
+	<entitygroup name="ZomUtilityWorker">
+		robotAndroidEva, 1
+		robotAndroidOrion, 1
+		robotDroidCombat, 1
+	</entitygroup>
+	<entitygroup name="GroupHospital">
+		robotCyborgNova, 1
+		robotAndroidAndromeda, 1
+		robotAndroidPrime, 1
+	</entitygroup>
+	<entitygroup name="GroupNightClub">
+		robotDroneNano, 1
+		robotAndroidAxl, 1
+		robotAndroidAndromeda, 1
+	</entitygroup>
+	<entitygroup name="GroupLabWorker">
+		robotCyborgSpark, 1
+		robotAndroidClank, 1
+		robotAndroidChronos, 1
+	</entitygroup>
+	<entitygroup name="GroupSpecialInfected">
+		robotSpiderBot, 1
+		robotDroidBomber, 1
+		robotCyborgTitan, 1
+		robotCyborgNova, 1
+	</entitygroup>
+	<entitygroup name="GroupTestChamberDecoy">
+		robotSpiderBotNano, 1
+		robotDronePoliceNano, 1
+	</entitygroup>
+  </append>
+</config>
