@@ -1,4 +1,4 @@
-Related to: https://gitlab.com/malcom2073/District-Zero to allow for LFS
+Relocated to: https://gitlab.com/malcom2073/District-Zero to allow for LFS
 
 # Introduction
 *In a dystopian world ravaged by zombies, robots were deployed with strict orders to eliminate any signs of life to try and contain the outbreak. As a result, many remaining survivors that had not been infected were wiped out and the animals that once roamed the grasslands became extinct. The year is now 2034 and the zombie outbreak still rages across the wastelands fuelled by a mysterious glow that keeps the undead alive. Inspired by sci-fi games such as Generation Zero, Prey and Detroit: Become Human*
